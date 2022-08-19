@@ -1,0 +1,66 @@
+$border-color: #dadada;
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+:host-context(nz-header) {
+  padding: 0 10px;
+  border-left: 1px solid $border-color;
+}
+
+.current-weather-block {
+  display: flex;
+}
+
+.weather-info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.top-section {
+  line-height: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bottom-section {
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 12px;
+
+  & span:last-of-type {
+    margin-left: 5px;
+  }
+}
+
+.weather-list {
+  width: 400px;
+
+  & table {
+    width: 100%;
+  }
+}
+
+.header-row,
+.body-row {
+  display: grid;
+  grid-template-columns:  2fr repeat(4, 1fr);
+  align-items: center;
+
+  & td {
+    text-align: center;
+  }
+
+  & td:nth-of-type(3),
+  & td:nth-of-type(4),
+  & td:nth-of-type(5){
+    padding-bottom: 15px;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+

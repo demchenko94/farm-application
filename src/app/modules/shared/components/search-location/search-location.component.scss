@@ -1,0 +1,20 @@
+$border-color: #dadada;
+
+.search-control {
+  width: 300px;
+}
+
+:host {
+  display: flex;
+  align-items: center;
+}
+
+:host-context(nz-header) {
+  padding: 0 15px;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+
+  nz-select {
+    box-shadow: 0 2px 3px -2px rgb(0 0 0 / 50%);
+  }
+}

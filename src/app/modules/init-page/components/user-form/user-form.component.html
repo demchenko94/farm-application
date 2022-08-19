@@ -1,0 +1,24 @@
+<form nz-form [formGroup]="userInfoForm" class="user-form" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your first name!">
+      <nz-input-group>
+        <input type="text" nz-input formControlName="firstName" placeholder="First name"/>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your last name!">
+      <nz-input-group>
+        <input type="text" nz-input formControlName="lastName" placeholder="Last name"/>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your location">
+      <app-search-location (selectLocationEvent)="onSelect($event)"></app-search-location>
+    </nz-form-control>
+  </nz-form-item>
+  <button nz-button class="user-form-button user-form-margin" [disabled]="userInfoForm.invalid" [nzType]="'primary'">
+    Save
+  </button>
+</form>

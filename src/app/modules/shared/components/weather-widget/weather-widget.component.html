@@ -1,0 +1,52 @@
+<div class="current-weather-block"
+     nz-popover
+     [nzPopoverContent]="contentTemplate"
+     nzPopoverTrigger="click"
+     nzPopoverPlacement="bottom">
+  <div class="weather-icon">
+    <img [src]="weatherIconSrc" alt="weather-icon">
+  </div>
+  <div class="weather-info-block">
+    <div class="top-section">
+      <span>{{weatherTemp | temp}}</span>
+    </div>
+    <div class="bottom-section">
+      <span>{{weatherHumidity}}</span>
+      <span>{{weatherRain}}</span>
+    </div>
+  </div>
+</div>
+
+<ng-template #contentTemplate>
+  <div class="weather-list">
+    <table>
+      <thead>
+        <tr class="header-row">
+          <td></td>
+          <td></td>
+          <td>Min/Max</td>
+          <td>Rain</td>
+          <td>ET</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let weatherDay of weatherList" class="body-row">
+          <td>
+            {{weatherDay.dt | day}}
+          </td>
+          <td>
+            <img src="http://openweathermap.org/img/wn/{{weatherDay.weather[0].icon}}.png" alt="weather-icon">
+          </td>
+          <td>
+            {{weatherDay.main.temp_min | temp}} - {{weatherDay.main.temp_max | temp}}
+          </td>
+          <td>
+            <span *ngIf="weatherDay.rain">{{weatherDay.rain['3h']}}mm</span>
+            <span *ngIf="!weatherDay.rain">-</span>
+          </td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-template>

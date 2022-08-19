@@ -1,0 +1,42 @@
+$navigation-background: #fff;
+$border-color: #dadada;
+$text-color: #4b4b4b;
+$text-color_hover: #008afb;
+
+.navigation-list {
+  position: fixed;
+  top: 130px;
+  width: 60px;
+  height: 500px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  border: 1px solid $border-color;
+  border-radius: 0 10px 10px 0;
+  padding: 10px;
+  background-color: $navigation-background;
+  box-shadow: 0 0 13px -7px rgb(0 0 0 / 30%);
+
+  & li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 3px 6px rgb(0 0 0 / 15%);
+    font-size: 1.3rem;
+    color: $text-color;
+  }
+
+  & li:hover {
+    color: $text-color_hover;
+    border: 2px solid $text-color_hover;
+    box-shadow: 0 3px 6px rgb(0 138 251 / 20%), 0 3px 6px rgb(0 138 251 / 30%);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+}

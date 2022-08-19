@@ -1,0 +1,12 @@
+$border-color: #dadada;
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+:host-context(nz-header) {
+  padding: 0 10px;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+}
