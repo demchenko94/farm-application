@@ -4,7 +4,12 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, mergeMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 
-import {apiLoadCurrentWeather, apiLoadWeather, loadCurrentWeather, loadWeather} from '@app/store/weather';
+import {
+  apiLoadCurrentWeather,
+  apiLoadWeather,
+  loadCurrentWeather,
+  loadWeather,
+} from '@app/store/weather';
 import { WeatherService } from '@modules/core/services';
 
 @Injectable()

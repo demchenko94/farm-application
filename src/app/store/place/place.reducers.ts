@@ -1,7 +1,6 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { PlaceState } from './place.state';
-import {apiLoadPlaceDetails, selectPlaceId, sessionStorageLoadSavedPlace} from '@app/store/place';
-import {sessionStorageLoadSavedUser} from "@app/store/user";
+import { apiLoadPlaceDetails, selectPlaceId, sessionStorageLoadSavedPlace } from '@app/store/place';
 
 const initialState: PlaceState = {
   name: '',

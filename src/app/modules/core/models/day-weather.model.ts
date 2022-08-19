@@ -26,7 +26,7 @@ export interface DayWeather {
     main: string;
   }[];
   wind?: { speed: number; deg: number };
-  rain?: { '1h'?: number, '3h'?: number};
+  rain?: { '1h'?: number; '3h'?: number };
 }
 
 interface Weather {

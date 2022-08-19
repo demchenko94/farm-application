@@ -8,8 +8,7 @@ export const currentWeather = createSelector(selectWeather, (s) => {
 });
 
 export const weatherList = createSelector(selectWeather, (s) => {
-
   return s.list.filter((item, index) => {
-    return index % 8 === 0
+    return index % 8 === 0;
   });
 });

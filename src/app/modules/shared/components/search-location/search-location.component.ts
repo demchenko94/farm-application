@@ -48,7 +48,7 @@ export class SearchLocationComponent implements OnInit {
   private initSavePlace() {
     this.store.select(place).subscribe((data) => {
       this.optionList = [data];
-      this.selectedLocation = data.place_id
+      this.selectedLocation = data.place_id;
     });
   }
 }

@@ -24,8 +24,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '@env/environment';
 import { UserEffects } from '@app/store/user';
-import {PlaceEffects} from "@app/store/place";
-import {WeatherEffects} from "@app/store/weather";
+import { PlaceEffects } from '@app/store/place';
+import { WeatherEffects } from '@app/store/weather';
 
 registerLocaleData(en);
 
